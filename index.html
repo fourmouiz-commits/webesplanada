@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esplanada - Restaurante</title>
+  <style>
+    :root{--accent:#C45A31;--bg:#f7f5f2;--card:#ffffff;--text:#222}
+    body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0}
+    header{background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;color:white;padding:5rem 1rem;text-align:center}
+    header h1{font-size:clamp(1.8rem,4vw,3rem);margin:0}
+    header p{opacity:0.95;margin-top:0.5rem}
+    .container{max-width:1100px;margin:2rem auto;padding:0 1rem}
+    .grid{display:grid;gap:1rem}
+    .menu-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+    .card{background:var(--card);border-radius:12px;padding:1rem;box-shadow:0 6px 18px rgba(20,20,20,0.06)}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .section-title{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem}
+    .section-title h2{margin:0}
+    .price{float:right;font-weight:700}
+    .dish{padding:0.5rem 0;border-bottom:1px dashed #eee}
+    footer{padding:2rem 1rem;text-align:center;color:#555}
+    .hero-cta{margin-top:1rem;display:inline-block;background:var(--accent);color:white;padding:.6rem 1rem;border-radius:999px;text-decoration:none}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.5rem}
+    @media(min-width:900px){header{padding:7rem 1rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Esplanada</h1>
+    <p>Sabores mediterráneos en un espacio relajado junto al mar — Cocina casera, producto local.</p>
+    <a class="hero-cta" href="#menu">Ver carta y fotos ↓</a>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Entrada del restaurante" style="width:160px;height:120px;object-fit:cover;border-radius:8px">
+        <div>
+          <h2>Bienvenidos a Esplanada</h2>
+          <p>En Esplanada ofrecemos una carta cuidada con ingredientes de proximidad. Perfecto para almuerzos, cenas y celebraciones. Reserva por teléfono o ven directamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" style="margin-top:1.25rem">
+      <div class="section-title"><h2>Carta</h2></div>
+      <div class="grid menu-grid">
+        <div class="card">
+          <h3>Entrantes</h3>
+          <div class="dish"><strong>Bruschetta de tomate</strong><span class="price">6,50 €</span><div style="clear:both"></div><small>Tostadas con tomate, ajo y albahaca.</small></div>
+          <div class="dish"><strong>Mejillones al vapor</strong><span class="price">9,00 €</span><div style="clear:both"></div><small>Mejillones locales con vino blanco y perejil.</small></div>
+          <div class="dish"><strong>Tabla de quesos y embutidos</strong><span class="price">12,50 €</span><div style="clear:both"></div><small>Selección de quesos artesanos y embutidos.</small></div>
+        </div>
+
+        <div class="card">
+          <h3>Ensaladas y sopas</h3>
+          <div class="dish"><strong>Ensalada Esplanada</strong><span class="price">10,50 €</span><div style="clear:both"></div><small>Lechugas, aguacate, naranja, frutos secos y vinagreta de miel.</small></div>
+          <div class="dish"><strong>Gazpacho tradicional</strong><span class="price">5,50 €</span><div style="clear:both"></div><small>Fresco y suave, ideal para compartir.</small></div>
+        </div>
+
+        <div class="card">
+          <h3>Platos principales</h3>
+          <div class="dish"><strong>Paella de marisco (min. 2 pers.)</strong><span class="price">18,00 € / pers</span><div style="clear:both"></div><small>Arroz caldoso con gambas, calamares y mejillones.</small></div>
+          <div class="dish"><strong>Lubina a la plancha</strong><span class="price">17,50 €</span><div style="clear:both"></div><small>Filete de lubina con patatas confitadas y verduras.</small></div>
+          <div class="dish"><strong>Solomillo de cerdo</strong><span class="price">16,00 €</span><div style="clear:both"></div><small>Salsa de vino tinto, puré rústico y verduras al vapor.</small></div>
+        </div>
+
+        <div class="card">
+          <h3>Postres y bebidas</h3>
+          <div class="dish"><strong>Crema catalana</strong><span class="price">5,00 €</span><div style="clear:both"></div><small>Caramelizada al momento.</small></div>
+          <div class="dish"><strong>Tarta casera del día</strong><span class="price">5,00 €</span><div style="clear:both"></div><small>Pregunte al camarero por la opción del día.</small></div>
+          <div class="dish"><strong>Copa de vino (copa)</strong><span class="price">3,50 €</span><div style="clear:both"></div><small>Selección de vinos locales y nacionales.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotos" style="margin-top:1.5rem">
+      <div class="section-title"><h2>Fotos</h2></div>
+      <div class="gallery">
+        <img class="card" src="https://images.unsplash.com/photo-1526318472351-c75fcf070b50?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Plato principal">
+        <img class="card" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Entrada restaurante interior">
+        <img class="card" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Postre casero">
+        <img class="card" src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Paella">
+      </div>
+    </section>
+
+    <section id="contacto" style="margin-top:1.5rem">
+      <div class="card">
+        <h3>Contacto y reservas</h3>
+        <p><strong>Dirección:</strong> Paseo Esplanada, 12 — Ciudad Costera</p>
+        <p><strong>Teléfono:</strong> +34 600 000 000</p>
+        <p><strong>Horario:</strong> Lun-Dom 12:30–16:00 / 19:00–23:30</p>
+        <p>Reserva online: <em>info@esplanada.com</em> (ejemplo) o llama directamente.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:0 auto;padding:0 1rem">© Esplanada — Todos los derechos reservados.</div>
+  </footer>
+</body>
+</html>
